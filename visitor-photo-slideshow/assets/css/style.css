@@ -1,0 +1,473 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+:root {
+    --dark: #111827;
+    --purple: #7958ed;
+    --light: #f7f7fc;
+    --text: #25243a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.main-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 0;
+    z-index: 10;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: 800;
+    font-size: 23px;
+}
+
+.navbar-brand span:last-child {
+    color: #a99aff;
+}
+
+.brand-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8d6cff, #5435d7);
+    color: white !important;
+    margin-right: 8px;
+}
+
+.nav-display {
+    color: white;
+    border: 1px solid #ffffff50;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.nav-display:hover {
+    background: white;
+    color: var(--dark);
+}
+
+/* HERO */
+
+.hero-section {
+    min-height: 760px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 35%, #49328e 0%, transparent 35%),
+        linear-gradient(120deg, #101322, #1b1740, #101322);
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ffffff12;
+    border-radius: 50%;
+    right: -100px;
+    top: 120px;
+    box-shadow: 0 0 0 60px #ffffff06,
+                0 0 0 120px #ffffff04;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+}
+
+.hero-badge,
+.section-label {
+    color: #a99aff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #a18aff;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 83px);
+    font-weight: 700;
+    line-height: 1.12;
+    margin-top: 28px;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(90deg, #b8a5ff, #8a6cff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    max-width: 550px;
+    color: #c1c1d1;
+    font-size: 17px;
+    line-height: 1.9;
+    margin: 25px 0 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn,
+.dark-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 27px;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.primary-btn {
+    color: white;
+    background: linear-gradient(120deg, #967bff, #6846ed);
+    box-shadow: 0 12px 30px #7958ed40;
+}
+
+.primary-btn:hover {
+    color: white;
+    transform: translateY(-4px);
+}
+
+.secondary-btn {
+    color: white;
+    border: 1px solid #ffffff45;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: var(--dark);
+}
+
+.hero-features {
+    display: flex;
+    gap: 65px;
+    margin-top: 65px;
+}
+
+.hero-features div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.hero-features strong {
+    color: #a994ff;
+    font-size: 23px;
+}
+
+.hero-features span {
+    color: #d1d0df;
+    font-size: 13px;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.welcome-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 46px);
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.welcome-section p {
+    color: #77758b;
+    margin-bottom: 30px;
+}
+
+.dark-btn {
+    background: var(--dark);
+    color: white;
+}
+
+.dark-btn:hover {
+    background: var(--purple);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.main-footer {
+    background: #111322;
+    color: #aaa9bd;
+    text-align: center;
+    padding: 24px;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* REGISTRATION PAGE */
+
+.register-body {
+    background: #f3f1fa;
+    min-height: 100vh;
+}
+
+.register-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.register-left {
+    background:
+        radial-gradient(circle at 90% 20%, #5943a9, transparent 40%),
+        linear-gradient(145deg, #141426, #30205d);
+    padding: 45px 9%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-brand {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.register-left-content {
+    max-width: 500px;
+}
+
+.register-left-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.2;
+    margin: 25px 0;
+}
+
+.register-left-content p {
+    color: #c5c1da;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.register-highlight {
+    margin-top: 35px;
+    padding: 17px;
+    border: 1px solid #ffffff30;
+    border-radius: 12px;
+    color: #e4ddff;
+}
+
+.register-highlight span {
+    color: #a58cff;
+    margin-right: 10px;
+}
+
+.register-left-footer {
+    color: #aaa5c3;
+    font-size: 13px;
+}
+
+.register-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 30px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    border-radius: 22px;
+    padding: 42px;
+    box-shadow: 0 20px 60px #30205d12;
+}
+
+.back-link {
+    color: #77758b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: var(--purple);
+}
+
+.form-heading {
+    margin: 35px 0;
+}
+
+.form-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 12px 0;
+}
+
+.form-heading p {
+    color: #858397;
+    font-size: 14px;
+}
+
+.form-group-custom {
+    margin-bottom: 22px;
+}
+
+.form-group-custom label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.form-group-custom input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e7e5ef;
+    border-radius: 10px;
+    outline: none;
+    background: #fafaff;
+    transition: .3s;
+}
+
+.form-group-custom input:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 4px #7958ed15;
+}
+
+.consent-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #f7f5ff;
+    margin: 25px 0;
+}
+
+.consent-box input {
+    margin-top: 5px;
+    accent-color: var(--purple);
+}
+
+.consent-box label {
+    font-size: 12px;
+    color: #68667c;
+    line-height: 1.8;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(120deg, #9275ff, #6544e5);
+    transition: .3s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #7958ed40;
+}
+
+.privacy-note {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #88869a;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .register-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .register-left {
+        min-height: 400px;
+        padding: 35px;
+    }
+
+    .register-left-content {
+        margin: 55px 0;
+    }
+
+    .register-right {
+        padding: 35px 18px;
+    }
+}
+
+@media(max-width: 576px) {
+    .hero-section {
+        min-height: 700px;
+    }
+
+    .hero-content {
+        padding-top: 100px;
+    }
+
+    .hero-features {
+        gap: 25px;
+    }
+
+    .hero-features strong {
+        font-size: 19px;
+    }
+
+    .hero-features span {
+        font-size: 11px;
+    }
+
+    .form-card {
+        padding: 27px 20px;
+    }
+
+    .register-left-content h1 {
+        font-size: 42px;
+    }
+}
+
